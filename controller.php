@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "Admin";
 $password = "H9F6QfnHsKVLHX8O";
-$database = "something";
+$database = "emailDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 echo "Connected successfully </br>";
 
 
-$createDatabase = "CREATE DATABASE IF NOT EXISTS something";
+$createDatabase = "CREATE DATABASE IF NOT EXISTS " .$database;
 
 if ($conn->query($createDatabase) === TRUE) {
 
